@@ -6,13 +6,18 @@
 
 <body>
 
-<p id ="para" ></p>
-<form action="http://api.idolondemand.com/1/api/sync/detectfaces/v1" method="post" enctype="multipart/form-data">
-  <input type="file" name="file" accept="image/*"/>
-  <input type="hidden" name="apikey" value="31073e76-4d1f-4615-9375-694ebfad9db7" />
-  <input type="submit"/>
-</form>
-<!-- script type = "text/javascript" src = "hack.js" /script -->
+  <div id="message"></div>
+  <form id = "frm1" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*"/>
+    <input type="hidden" name="apikey" value="31073e76-4d1f-4615-9375-694ebfad9db7" />
+    <input type="submit" value="Submit"/>
+  </form>
+  <div id="response"></div>
+  
+  <!--<button onclick="sendRequest()">Try it</button>-->
+  
+
+  <script type = "text/javascript" src = "hack.js" ></script>
 
 </body>
 </html>
