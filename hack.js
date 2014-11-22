@@ -1,10 +1,8 @@
 
-var callAPI = function(){
+var getURL = function(){
 
-  var x = "/1/api/sync/detectfaces/v1 file=my-face.jpg"
+  var url = "/1/api/sync/detectfaces/v1 file=my-face.jpg";
   
-  console.log(x);
+  return url;
 
 }
-
-callAPI();
