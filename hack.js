@@ -1,24 +1,19 @@
 
+var apiURL = "http://api.idolondemand.com/1/api/sync/detectfaces/v1";  
 
-var apiURL = "http://api.idolondemand.com/1/api/sync/detectfaces/v1 file=my-face.jpg";
-  
 
-var xhr = new XMLHttpRequest();
-xhr.open('POST', apiURL, true);
+var sendRequest = function(){
+  var xhr = new XMLHttpRequest();
 
-xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhr.onload = function () {
-    var response = "";
-    response=JSON.parse(this.responseText);
-    docs=response["documents"];
-    for (i=0;i<docs.length;i++){
-        alert(docs[i]["title"]);
-    }
-};
+  xhr.onload = reqListener(xhr);
 
-xhr.send('text=great&apikey=31073e76-4d1f-4615-9375-694ebfad9db7');
+  xhr.open("POST", apiURL, true);
 
-var data = new FormData();
-data.append('apikey', '31073e76-4d1f-4615-9375-694ebfad9db7');
-data.append('text', 'great');
-xhr.send(data);
+  xhr.send('file=C:\Users\John\Hackathon\Hackathon\my-face.jpg&apikey=31073e76-4d1f-4615-9375-694ebfad9db7');
+}
+
+var reqListener = function (xhr) {
+  alert(xhr.responseXML);
+}
+
+sendRequest();
