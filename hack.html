@@ -7,14 +7,12 @@
 <body>
 
   <div id="message"></div>
-  <form id = "frm1" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" accept="image/*"/>
-    <input type="hidden" name="apikey" value="31073e76-4d1f-4615-9375-694ebfad9db7" />
-    <input type="submit" value="Submit"/>
-  </form>
+   <form>
+    URL: <input id="url" type="text" name="link"><br>
+  </form> 
   <div id="response"></div>
   
-  <button onclick="sendRequest()">Try it</button>
+  <button onclick="sendRequest()" onclick="grabURL">Try it</button>
   
 
   <script type = "text/javascript" src = "hack.js" ></script>

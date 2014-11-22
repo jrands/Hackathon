@@ -17,5 +17,8 @@ var sendRequest = function(){
   console.log(xhrDoc);
 }
 
-setURL("http://spinoff.comicbookresources.com/wp-content/uploads/2013/09/jack_black.jpg");
+var grabURL = function(){
+  document.getElementById('url')
+}
 
+setURL("http://spinoff.comicbookresources.com/wp-content/uploads/2013/09/jack_black.jpg");
